@@ -13,6 +13,7 @@
       <div id="container">
         <div id="content" role="main">
           <!-- TODO: Content goes here -->
+          <!--Start Header-->
           <header>
             <img src="EPAM_logo.svg" alt="EPAM_logo">
             <nav>
@@ -24,6 +25,8 @@
             </nav>
             <hr>
           </header>
+          <!--End Header-->
+          <!--Start Section-->
           <section>
             <h1 id="elements"><strong>HTML Elements</strong></h1>
             <hr>
@@ -61,9 +64,9 @@
             <h3>Definition List</h3>
             <dl>
               <dt>defines terms 1</dt>
-              <dd>description 1</dd>
+                <dd>description 1</dd>
               <dt>defines terms 2</dt>
-              <dd>description</dd>
+                <dd>description</dd>
             </dl>
             <h2 id="details">Details</h2>
             <details open="open">
@@ -110,8 +113,8 @@
             </article>
             <h2>Preformatted Text</h2>
             <pre>
-Text
-  in a pre element
+<strong>Text</strong>
+  in a <strong>pre</strong> element
     is displayed in a fixed-width
 font, and it preserves
 both           spaces and
@@ -120,12 +123,14 @@ both           spaces and
 
             <h2>Code</h2>
             <pre>
+              <code>
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
+              </code>
             </pre>
             <hr>
             <h2 id="blockquotes">Blockquotes</h2>
@@ -135,7 +140,10 @@ both           spaces and
               </blockquote>
             <p hidden>And here’s a bit of trailing text.</p>
           </section>
+          <!--End Section-->
+          <!--Start Footer-->
           <footer>Copyright Epam Systems</footer>
+          <!--End Footer-->
         </div>
       </div>
     </div>
