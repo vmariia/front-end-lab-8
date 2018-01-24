@@ -79,10 +79,7 @@ write your code here
 	}
 
 	/* +++++ #8 +++++ */
-	/*.tm-main-content > section:not(:first-child) p {
-		text-indent: 20px;
-		line-height: 25px;
-	}*/
+
 
 	/* +++++ #9 +++++ */
 	.heading ol li a {
