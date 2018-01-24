@@ -12,3 +12,121 @@ a:focus{color:#666;outline:0}ul{padding:0;margin:0}body{background-color:#f2f2f2
 write your code here
 
 */
+
+/* +++++  #1  +++++ */
+@media print {
+	.tm-sidebar {
+		display: none;
+	}
+	.tm-main-content {
+		margin-left: 0px;
+		padding-left: 0px;
+	}
+	.tm-banner {
+		height: 230px;
+		padding: 0px;
+	}
+	.flex-2-col {
+		display: block;
+	}
+	.tm-team-description-container {
+		max-width: 90%;
+	}
+	.tm-team-description-container h2 {
+		color: #221DFF;
+	}
+	.pad {
+	    padding: 0 20px;
+	}
+	.flex-item img {
+		display: block;
+		margin: 0 auto;
+	}
+	section:nth-child(n+3), #about {
+		display: none;
+	}
+}
+
+@media screen {
+	/* +++++ #2 +++++ */
+
+
+	/* +++++ #3 +++++ */
+	p::first-letter {
+		color: #76cdd7;
+		font-size: 30px;
+	}
+
+	/* +++++ #4 +++++ */
+	.tm-sidebar, .tm-content-box {
+		box-shadow: 0 0 15px rgba(0,0,0,0.8);
+	}
+
+	/* +++++ #5 +++++ */
+	.gallery-container a img {
+		border: 2px silver solid;
+	}
+
+	/* +++++ #6 +++++ */
+	.carousel-content h2.tm-section-title {
+		color: gainsboro;
+		letter-spacing: 5px;
+	}
+
+	/* +++++ #7 +++++ */
+	h2 + p {
+		font-style: italic;
+	}
+
+	/* +++++ #8 +++++ */
+	/*.tm-main-content > section:not(:first-child) p {
+		text-indent: 20px;
+		line-height: 25px;
+	}*/
+
+	/* +++++ #9 +++++ */
+	.heading ol li a {
+		color: #000;
+		transition: all 0.5s linear;
+	}
+
+	.heading ol li a:visited {
+		color: silver;
+	}
+
+	.heading ol li a:hover {
+		color: #76cdd7;
+	}
+
+	.heading ol li a.text:after {
+		content: "New";
+	    position: absolute;
+	    font-size: 10px;
+	    color: red;
+	}
+
+	/* +++++ #10 +++++ */
+	.gallery-container .box p::first-letter {
+		color: rgb(0,0,0);
+	}
+
+	.gallery-container .box-bg {
+		background-color: #efefef;
+	}
+
+	/* +++++ #11 +++++ */
+	.tm-main-nav .tm-nav-item {
+		border-bottom: solid 1px silver;
+	}
+	.tm-main-nav .tm-nav-item:last-child {
+		border-bottom: none;
+	}
+
+	/* +++++ #12 +++++ */
+	input[type=text], button[type=submit] {
+		color: red;
+	}
+
+	/* +++++ #13 +++++ */
+
+}
