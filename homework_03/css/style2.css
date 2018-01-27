@@ -1,0 +1,17 @@
+body {
+  margin: 0px;
+  background: rgba(198, 238, 252, 0.53);
+}
+body #content {
+  display: block;
+  margin: 10px auto;
+  max-width: 990px;
+  padding: 7px;
+  background: #3b3b3b;
+}
+body #content h1 {
+  color: #fccd10;
+}
+body #content h2 {
+  color: #fccd10;
+}

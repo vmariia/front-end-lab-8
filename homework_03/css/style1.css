@@ -1,0 +1,17 @@
+body {
+  margin: 0px;
+  background: #dcbb9a;
+}
+body #content {
+  display: block;
+  margin: 10px auto;
+  max-width: 990px;
+  padding: 7px;
+  background: #ffffff;
+}
+body #content h1 {
+  color: #893c00;
+}
+body #content h2 {
+  color: #893c00;
+}
