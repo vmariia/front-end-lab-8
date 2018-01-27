@@ -1,0 +1,21 @@
+body {
+	margin: 0px;
+	background: $bodyBackgroundColor;
+	#content {
+		display: block;
+		margin: 10px auto;
+		max-width: 990px;
+		padding: 7px;
+		background: $contentBackgroundColor;
+		h1 {
+			color: $titleColor;
+		}
+		h2 {
+			color: $titleColor;
+		}
+	}
+}
+
+
+	
+
