@@ -1,6 +1,16 @@
+@mixin brief {
+	background: $briefBackgroundColor;
+	width: $briefWidth;
+	float: left;
+	padding: 15px;
+	margin: 0px 21px $briefMarginBottom 0px;
+	box-sizing: border-box;
+	color: $briefColor;
+} 
 body {
 	margin: 0px;
 	background: $bodyBackgroundColor;
+	color: $textColor;
 	#content {
 		display: block;
 		margin: 10px auto;
@@ -9,13 +19,91 @@ body {
 		background: $contentBackgroundColor;
 		h1 {
 			color: $titleColor;
+			text-align: center;
 		}
 		h2 {
 			color: $titleColor;
 		}
+		img {
+			border: 2px solid $borderColor;
+			padding: 2px;
+		}
+		.img-left {
+			float: left;
+			margin: 0 10px 10px 0;
+		}
+		.img-right {
+			float: right;
+			margin: 0px 0px 10px 10px;
+		}
+		.brief {
+			@include brief;
+		}
+		a {
+			color: $linkColor;
+		}
+		table {
+    		border-collapse: collapse;
+    		caption {
+    			color: $captionColor;
+    			text-align: right;
+    		}
+			tr {
+				border-bottom: 1px solid $tdBorderBottom;
+				th {
+					background: $theadBackgroundColor;
+					text-align: left;
+					color: $theadColor;
+					text-transform: uppercase;
+					padding: 10px 20px;
+					&:not(:last-child) {
+						border-right: 1px solid $theadBorderColor;
+					}
+				}
+				td {
+					padding: 7px 20px;
+					background-color: $tbodyBackgroundColor;
+				}
+			}
+		}
+		.contact-form {
+			.form-element {
+				display: flex;
+                flex-direction: column;
+    			box-sizing: border-box;
+                width: 100%;
+                margin-bottom: 15px;
+                &-left {
+                	float: left;
+                	width: 50%;
+                	padding-right: 3px;
+                }
+                &-right {
+                	float: right;
+                	width: 50%;
+                	padding-left: 3px;
+                }
+                label {
+            	    text-transform: uppercase;
+				    color: $labelColor;
+				    margin-bottom: 5px;
+                }
+                input, textarea {
+                	padding: 5px;
+                	border: 1px solid $inputBorder;
+                }
+                textarea {
+                	resize: none;
+                }
+			}
+			.btn {
+            	padding: 10px 50px;
+            	border: 1px solid $buttonBorderColor;
+            	color: $buttonTextColor;
+            	text-transform: uppercase;
+            	background: $buttonBackgroundColor;
+            	margin: 5px 0px 30px 0px;
+            }
+		}
 	}
 }
-
-
-	
-
