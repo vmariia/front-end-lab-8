@@ -1,28 +1,44 @@
 @mixin brief {
-	background: $briefBackgroundColor;
 	width: $briefWidth;
 	float: left;
 	padding: 15px;
 	margin: 0px 21px $briefMarginBottom 0px;
-	box-sizing: border-box;
-	color: $briefColor;
+	@include colorStyles ($briefBackgroundColor, $briefColor);
 } 
+@mixin colorStyles ($background, $color) {
+	background: $background;
+	color: $color;
+}
+@mixin box-sizing($value) {
+	-webkit-box-sizing: $value;
+	        box-sizing: $value;
+}
+@mixin transitionMixin ($property, $duration, $timing-function){
+	  -webkit-transition: $property $duration $timing-function; 
+    transition: $property $duration $timing-function;
+}
 body {
 	margin: 0px;
-	background: $bodyBackgroundColor;
-	color: $textColor;
+	@include colorStyles ($bodyBackgroundColor, $textColor);
+}
 	#content {
 		display: block;
 		margin: 10px auto;
-		max-width: 990px;
-		padding: 7px;
+		max-width: $contentWidth;
+		padding: 10px;
 		background: $contentBackgroundColor;
-		h1 {
-			color: $titleColor;
-			text-align: center;
-		}
 		h2 {
 			color: $titleColor;
+		}
+		h1 {
+			text-align: center;
+			@extend h2;
+			@if $pageVersion1 {
+				text-transform: capitalize;
+			}
+			@else {
+				text-transform: uppercase;
+			}
 		}
 		img {
 			border: 2px solid $borderColor;
@@ -38,9 +54,17 @@ body {
 		}
 		.brief {
 			@include brief;
+			@include box-sizing(border-box);
 		}
 		a {
 			color: $linkColor;
+      @include transitionMixin (all, 0.3s, linear);
+			&:visited {
+				color: $linkColorVisited;
+			}
+			&:hover {
+				color: $linkColorHover;
+			}
 		}
 		table {
     		border-collapse: collapse;
@@ -51,11 +75,10 @@ body {
 			tr {
 				border-bottom: 1px solid $tdBorderBottom;
 				th {
-					background: $theadBackgroundColor;
 					text-align: left;
-					color: $theadColor;
-					text-transform: uppercase;
 					padding: 10px 20px;
+					text-transform: uppercase;
+					@include colorStyles ($theadBackgroundColor, $theadColor);
 					&:not(:last-child) {
 						border-right: 1px solid $theadBorderColor;
 					}
@@ -69,8 +92,8 @@ body {
 		.contact-form {
 			.form-element {
 				display: flex;
-                flex-direction: column;
-    			box-sizing: border-box;
+        flex-direction: column;
+  			@include box-sizing(border-box);
                 width: 100%;
                 margin-bottom: 15px;
                 &-left {
@@ -91,19 +114,24 @@ body {
                 input, textarea {
                 	padding: 5px;
                 	border: 1px solid $inputBorder;
+                	outline: none;
                 }
                 textarea {
                 	resize: none;
                 }
 			}
 			.btn {
+				cursor: pointer;
             	padding: 10px 50px;
             	border: 1px solid $buttonBorderColor;
-            	color: $buttonTextColor;
             	text-transform: uppercase;
-            	background: $buttonBackgroundColor;
             	margin: 5px 0px 30px 0px;
+            	font-size: 22px;
+            	@include colorStyles ($buttonBackgroundColor, $buttonTextColor);
+            	@include transitionMixin (all, 1s, ease-in-out);
+            	&:hover {
+            		@include colorStyles ($buttonBackgroundColorHover, $buttonTextColorHover);
+            	}
             }
-		}
 	}
 }

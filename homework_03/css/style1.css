@@ -2,81 +2,98 @@ body {
   margin: 0px;
   background: #ddbc9b;
   color: #000000; }
-  body #content {
-    display: block;
-    margin: 10px auto;
-    max-width: 990px;
-    padding: 7px;
-    background: #ffffff; }
-    body #content h1 {
-      color: #8a3a00;
-      text-align: center; }
-    body #content h2 {
+
+#content {
+  display: block;
+  margin: 10px auto;
+  max-width: 990px;
+  padding: 10px;
+  background: #ffffff; }
+  #content h2, #content h1 {
+    color: #8a3a00; }
+  #content h1 {
+    text-align: center;
+    text-transform: capitalize; }
+  #content img {
+    border: 2px solid #8a3a00;
+    padding: 2px; }
+  #content .img-left {
+    float: left;
+    margin: 0 10px 10px 0; }
+  #content .img-right {
+    float: right;
+    margin: 0px 0px 10px 10px; }
+  #content .brief {
+    width: 35%;
+    float: left;
+    padding: 15px;
+    margin: 0px 21px 7px 0px;
+    background: #faddbb;
+    color: #000000;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  #content a {
+    color: #5382ad;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
+    #content a:visited {
       color: #8a3a00; }
-    body #content img {
-      border: 2px solid #8a3a00;
-      padding: 2px; }
-    body #content .img-left {
-      float: left;
-      margin: 0 10px 10px 0; }
-    body #content .img-right {
-      float: right;
-      margin: 0px 0px 10px 10px; }
-    body #content .brief {
-      background: #faddbb;
-      width: 35%;
-      float: left;
-      padding: 15px;
-      margin: 0px 21px 7px 0px;
-      box-sizing: border-box;
-      color: #000000; }
-    body #content a {
-      color: #5382ad; }
-    body #content table {
-      border-collapse: collapse; }
-      body #content table caption {
-        color: #000000;
-        text-align: right; }
-      body #content table tr {
-        border-bottom: 1px solid #e1e1e1; }
-        body #content table tr th {
-          background: #e1e1e1;
-          text-align: left;
-          color: #000000;
-          text-transform: uppercase;
-          padding: 10px 20px; }
-          body #content table tr th:not(:last-child) {
-            border-right: 1px solid #ffffff; }
-        body #content table tr td {
-          padding: 7px 20px;
-          background-color: #ffffff; }
-    body #content .contact-form .form-element {
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-      width: 100%;
-      margin-bottom: 15px; }
-      body #content .contact-form .form-element-left {
-        float: left;
-        width: 50%;
-        padding-right: 3px; }
-      body #content .contact-form .form-element-right {
-        float: right;
-        width: 50%;
-        padding-left: 3px; }
-      body #content .contact-form .form-element label {
+    #content a:hover {
+      color: #faddbb; }
+  #content table {
+    border-collapse: collapse; }
+    #content table caption {
+      color: #000000;
+      text-align: right; }
+    #content table tr {
+      border-bottom: 1px solid #e1e1e1; }
+      #content table tr th {
+        text-align: left;
+        padding: 10px 20px;
         text-transform: uppercase;
-        color: #8181a2;
-        margin-bottom: 5px; }
-      body #content .contact-form .form-element input, body #content .contact-form .form-element textarea {
-        padding: 5px;
-        border: 1px solid #e1e1e1; }
-      body #content .contact-form .form-element textarea {
-        resize: none; }
-    body #content .contact-form .btn {
-      padding: 10px 50px;
-      border: 1px solid #3b71a2;
-      color: #3b71a2;
+        background: #e1e1e1;
+        color: #000000; }
+        #content table tr th:not(:last-child) {
+          border-right: 1px solid #ffffff; }
+      #content table tr td {
+        padding: 7px 20px;
+        background-color: #ffffff; }
+  #content .contact-form .form-element {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 15px; }
+    #content .contact-form .form-element-left {
+      float: left;
+      width: 50%;
+      padding-right: 3px; }
+    #content .contact-form .form-element-right {
+      float: right;
+      width: 50%;
+      padding-left: 3px; }
+    #content .contact-form .form-element label {
       text-transform: uppercase;
-      background: #ffffff;
-      margin: 5px 0px 30px 0px; }
+      color: #8181a2;
+      margin-bottom: 5px; }
+    #content .contact-form .form-element input, #content .contact-form .form-element textarea {
+      padding: 5px;
+      border: 1px solid #e1e1e1;
+      outline: none; }
+    #content .contact-form .form-element textarea {
+      resize: none; }
+  #content .contact-form .btn {
+    cursor: pointer;
+    padding: 10px 50px;
+    border: 1px solid #3b71a2;
+    text-transform: uppercase;
+    margin: 5px 0px 30px 0px;
+    font-size: 22px;
+    background: #ffffff;
+    color: #3b71a2;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; }
+    #content .contact-form .btn:hover {
+      background: #3b71a2;
+      color: #ffffff; }
