@@ -17,12 +17,12 @@ body {
   #content img {
     border: 2px solid #fcce07;
     padding: 2px; }
-  #content .img-left {
-    float: left;
-    margin: 0 10px 10px 0; }
-  #content .img-right {
-    float: right;
-    margin: 0px 0px 10px 10px; }
+    #content img.img-left {
+      float: left;
+      margin: 0 10px 10px 0; }
+    #content img.img-right {
+      float: right;
+      margin: 0px 0px 10px 10px; }
   #content .brief {
     width: 100%;
     float: left;

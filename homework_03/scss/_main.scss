@@ -43,14 +43,14 @@ body {
 	img {
 		border: 2px solid $borderColor;
 		padding: 2px;
-	}
-	.img-left {
-		float: left;
-		margin: 0 10px 10px 0;
-	}
-	.img-right {
-		float: right;
-		margin: 0px 0px 10px 10px;
+		&.img-left {
+			float: left;
+			margin: 0 10px 10px 0;
+		}
+		&.img-right {
+			float: right;
+			margin: 0px 0px 10px 10px;
+		}
 	}
 	.brief {
 		@include brief;
