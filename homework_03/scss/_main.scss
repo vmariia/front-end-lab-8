@@ -14,124 +14,124 @@
 	        box-sizing: $value;
 }
 @mixin transitionMixin ($property, $duration, $timing-function){
-	  -webkit-transition: $property $duration $timing-function; 
-    transition: $property $duration $timing-function;
+	-webkit-transition: $property $duration $timing-function; 
+    		transition: $property $duration $timing-function;
 }
 body {
 	margin: 0px;
 	@include colorStyles ($bodyBackgroundColor, $textColor);
 }
-	#content {
-		display: block;
-		margin: 10px auto;
-		max-width: $contentWidth;
-		padding: 10px;
-		background: $contentBackgroundColor;
-		h2 {
-			color: $titleColor;
+#content {
+	display: block;
+	margin: 10px auto;
+	max-width: 980px;
+	padding: 10px;
+	background: $contentBackgroundColor;
+	h2 {
+		color: $titleColor;
+	}
+	h1 {
+		text-align: center;
+		@extend h2;
+		@if $style1 {
+		text-transform: capitalize;
 		}
-		h1 {
-			text-align: center;
-			@extend h2;
-			@if $pageVersion1 {
-				text-transform: capitalize;
-			}
-			@else {
+		@else {
+		text-transform: uppercase;
+		}
+	}
+	img {
+		border: 2px solid $borderColor;
+		padding: 2px;
+	}
+	.img-left {
+		float: left;
+		margin: 0 10px 10px 0;
+	}
+	.img-right {
+		float: right;
+		margin: 0px 0px 10px 10px;
+	}
+	.brief {
+		@include brief;
+		@include box-sizing(border-box);
+	}
+	a {
+		color: $linkColor;
+		@include transitionMixin (all, 0.3s, linear);
+		&:visited {
+			color: $linkColorVisited;
+		}
+		&:hover {
+			color: $linkColorHover;
+		}
+	}
+	table {
+	border-collapse: collapse;
+		caption {
+			color: $captionColor;
+			text-align: right;
+		}
+		tr {
+			border-bottom: 1px solid $tdBorderBottom;
+			th {
+				text-align: left;
+				padding: 10px 20px;
 				text-transform: uppercase;
+				@include colorStyles ($theadBackgroundColor, $theadColor);
+				&:not(:last-child) {
+					border-right: 1px solid $theadBorderColor;
+				}
+			}
+			td {
+				padding: 7px 20px;
+				background-color: $tbodyBackgroundColor;
 			}
 		}
-		img {
-			border: 2px solid $borderColor;
-			padding: 2px;
-		}
-		.img-left {
-			float: left;
-			margin: 0 10px 10px 0;
-		}
-		.img-right {
-			float: right;
-			margin: 0px 0px 10px 10px;
-		}
-		.brief {
-			@include brief;
+	}
+	.contact-form {
+		.form-element {
+			display: flex;
+			flex-direction: column;
 			@include box-sizing(border-box);
-		}
-		a {
-			color: $linkColor;
-      @include transitionMixin (all, 0.3s, linear);
-			&:visited {
-				color: $linkColorVisited;
+			width: 100%;
+			margin-bottom: 15px;
+			&-left {
+				float: left;
+				width: 50%;
+				padding-right: 3px;
 			}
+			&-right {
+				float: right;
+				width: 50%;
+				padding-left: 3px;
+			}
+			label {
+				text-transform: uppercase;
+				color: $labelColor;
+				margin-bottom: 5px;
+			}
+			input, textarea {
+				padding: 5px;
+				border: 1px solid $inputBorder;
+				outline: none;
+			}
+			textarea {
+				resize: none;
+			}
+		}
+		.btn {
+			cursor: pointer;
+			padding: 10px 50px;
+			border: 1px solid $buttonBorderColor;
+			text-transform: uppercase;
+			margin: 5px 0px 30px 0px;
+			font-size: 22px;
+			@include colorStyles ($buttonBackgroundColor, $buttonTextColor);
+			@include transitionMixin (all, 1s, ease-in-out);
 			&:hover {
-				color: $linkColorHover;
+				@include colorStyles ($buttonBackgroundColorHover, $buttonTextColorHover);
 			}
 		}
-		table {
-    		border-collapse: collapse;
-    		caption {
-    			color: $captionColor;
-    			text-align: right;
-    		}
-			tr {
-				border-bottom: 1px solid $tdBorderBottom;
-				th {
-					text-align: left;
-					padding: 10px 20px;
-					text-transform: uppercase;
-					@include colorStyles ($theadBackgroundColor, $theadColor);
-					&:not(:last-child) {
-						border-right: 1px solid $theadBorderColor;
-					}
-				}
-				td {
-					padding: 7px 20px;
-					background-color: $tbodyBackgroundColor;
-				}
-			}
-		}
-		.contact-form {
-			.form-element {
-				display: flex;
-        flex-direction: column;
-  			@include box-sizing(border-box);
-                width: 100%;
-                margin-bottom: 15px;
-                &-left {
-                	float: left;
-                	width: 50%;
-                	padding-right: 3px;
-                }
-                &-right {
-                	float: right;
-                	width: 50%;
-                	padding-left: 3px;
-                }
-                label {
-            	    text-transform: uppercase;
-				    color: $labelColor;
-				    margin-bottom: 5px;
-                }
-                input, textarea {
-                	padding: 5px;
-                	border: 1px solid $inputBorder;
-                	outline: none;
-                }
-                textarea {
-                	resize: none;
-                }
-			}
-			.btn {
-				cursor: pointer;
-            	padding: 10px 50px;
-            	border: 1px solid $buttonBorderColor;
-            	text-transform: uppercase;
-            	margin: 5px 0px 30px 0px;
-            	font-size: 22px;
-            	@include colorStyles ($buttonBackgroundColor, $buttonTextColor);
-            	@include transitionMixin (all, 1s, ease-in-out);
-            	&:hover {
-            		@include colorStyles ($buttonBackgroundColorHover, $buttonTextColorHover);
-            	}
-            }
 	}
 }
