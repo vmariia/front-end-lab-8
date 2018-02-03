@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  
 	<title>Epam Front End Lab. Css Layouts</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -27,7 +27,7 @@
 		<section class="banner-bg">
 			<div class="container">
 				<div class="banner-content">
-					<h1>Black <span>&amp;</span> white</h1>
+					<h1>Black <span>&amp;</span> white <span>tm</span></h1>
 					<p>An Original Brand Since 1965</p>
 				</div>
 				<div class="banner-button">
@@ -57,44 +57,45 @@
 			<div class="container">
 				<h2>Read some of our featured articles</h2>
 				<div class="articles-content">
-					<div class="article-item">
-						<img src="img/sample.jpg" alt="">
+					<div class="article-item item1">
+						<!-- <img src="img/sample.jpg" alt=""> -->
+						<div class="gradient"></div>
 						<a href="#">Januari '15 <b>South France</b></a>
 						<div class="likes">
-							dandkn
+							172 <span>&#10084;</span>
 						</div>
 					</div>
-					<div class="article-item">
-						<img src="img/sample2.jpg" alt="">
+					<div class="article-item item2">
+						<!-- <img src="img/sample2.jpg" alt=""> -->
+						<div class="gradient"></div>
 						<a href="#">Januari '15 <b>Budapest</b></a>
 						<div class="likes">
-							dandkn
+							112 <span>&#10084;</span>
 						</div>
 					</div>
-					</div>
-					<div class="articles-content">
-
-					<div class="article-item">
-						<img src="img/sample2.jpg" alt="">
+					<div class="article-item item3">
+						<!-- <img src="img/sample2.jpg" alt=""> -->
+						<div class="gradient"></div>
 						<a href="#">Januari '15 <b>Budapest</b></a>
 						<div class="likes">
-							dandkn
+							112 <span>&#10084;</span>
 						</div>
 					</div>
-					<div class="article-item">
-						<img src="img/sample3.jpg" alt="">
+					<div class="article-item item4">
+						<!-- <img src="img/sample3.jpg" alt=""> -->
+						<div class="gradient"></div>
 						<a href="#">Januari '15 <b>South America</b></a>
 						<div class="likes">
-							dandkn
+							313 <span>&#10084;</span>
 						</div>
 					</div>
 				</div>
 				<div class="subscribe-container">
 				  <p>Subscribe to our <b>newsletter</b></p>
-					<div>
-						<input type="email" name="email" placeholder="E-mail address">
-						<input type="button" name="button" value="Subscribe">
-					</div>
+					<form action="#subscribe" method="get" class="subscribe-form">
+						<input type="email" name="email" placeholder="Enter your e-mail address">
+						<button type="submit" class="btn btn-primary submit-btn">Subscribe</button>
+					</form>
 				</div>
 			</div>
 		</section>
@@ -105,38 +106,52 @@
 			<div class="footer-top">
 				<div class="footer-item">
 					<h4>Black &amp; white</h4>
-					<p>
-						consequuntur magni dolores atione voluptatem sequi nesc ue porro quisquam est, qui d sum quia dolor sit amet, cons sum quia sum quia
-					</p>
+					<div class="desc">
+						<p>
+							consequuntur magni dolores atione voluptatem sequi nesc ue porro quisquam est, qui d sum quia dolor sit amet, cons sum quia sum quia
+						</p>
+					</div>
 				</div>
 				<div class="footer-item">
 					<h4>Contact</h4>
-					<a href="www.loremipsumdolar.nl">www.loremipsumdolar.nl</a>
-					<p>
-						182 AB Your Street Name
-					</p>
-					<a href="mailto:e-mail@loremipsum.com">e-mail@loremipsum.com</a>
-					<a href="tel:+121012345679">+(121)01 23 45 679</a>
+					<div class="contact">
+						<a href="www.loremipsumdolar.nl">www.loremipsumdolar.nl</a>
+						<p>
+							182 AB Your Street Name
+						</p>
+						<a href="mailto:e-mail@loremipsum.com">e-mail@loremipsum.com</a><br>
+						<a href="tel:+121012345679">+(121)01 23 45 679</a>
+					</div>
 				</div>
 				<div class="footer-item">
 					<h4>Contact</h4>
-					<blockquote>"...aerat vluptatem. Ut eni et illi dolore magnam aliqua et aerat voluptatem. Utils en tils et al is minima veniam."</blockquote>
+					<div class="blockquote">
+						<blockquote>...aerat vluptatem. Ut eni et illi dolore magnam aliqua et aerats voluptatem. Utils en tils et al is minima veniam.</blockquote>
+						<p>3 hours ago</p>
+					</div>
 				</div>
 				<div class="footer-item">
 					<h4>Contact</h4>
-					<p>
+					<div class="footer-subscribe">
+						<p>
 						Neque porro quisquam eist, im ipsum quia dolor sit amettur, adipisci velit,
-					</p>
-					<div>
-						<input type="email" name="email" placeholder="E-mail address">
-						<input type="button" name="button" value="Subscribe">
+						</p>
+						<form action="#subscribe" method="get" class="subscribe-form">
+							<input type="email" name="email" placeholder="E-mail address">
+							<button type="submit" class="btn btn-primary submit-btn">Subscribe</button>
+						</form>
 					</div>
 				</div>
 			</div>
 			<hr>
 			<div class="footer-bottom">
-				<div>sldkm</div>
-				<div>sldkm</div>
+				<div class="copy-right">© 2015 Ruben Stom.</div>
+				<div class="bottom-nav">
+					<a href="#">Home</a>
+					<a href="#">About</a>
+					<a href="#">Shop</a>
+					<a href="#">Vacancies</a>
+				</div>
 			</div>
 		</div>
 	</footer>
