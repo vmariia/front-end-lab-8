@@ -12,7 +12,9 @@ body, ul, p, h1, h2 {
 /*General*/
 /*============================*/
 body {
-  font-family: 14px/1.2 Arial, Helvetica, sans-serif; }
+  font-size: 14px;
+  line-height: 1.2em;
+  font-family: Arial, Helvetica, sans-serif }
 
 .container {
   max-width: 90%;
@@ -48,8 +50,7 @@ header {
           color: #5c6c79;
           -webkit-transition: all 0.5s ease-in-out;
           transition: all 0.5s ease-in-out; }
-          header .navigation ul li a:hover {
-            color: #5acadc; }
+         
 
 /*============================*/
 /*Header*/
@@ -70,7 +71,8 @@ main {
       padding: 60px 0px;
       max-width: 350px; }
       main .banner-bg .banner-content h1 {
-        font-size: 36px; }
+        font-size: 36px;
+        line-height: 44px; }
   main .articles {
     display: grid;
     grid-gap: 20px;
@@ -85,8 +87,6 @@ main {
       text-decoration: none;
       -webkit-transition: all 0.5s ease-in-out;
       transition: all 0.5s ease-in-out; }
-      main .articles-item:hover {
-        background: #37c3d8; }
       main .articles-item .articles-img img {
         width: 100%; }
       main .articles-item .articles-content {
@@ -107,8 +107,7 @@ footer {
       color: #ffffff;
       -webkit-transition: all 0.5s ease-in-out;
       transition: all 0.5s ease-in-out; }
-      footer .footer-content .footer-nav a:hover {
-        text-decoration: none; }
+      
 
 @media (max-width: 900px) {
   header .navigation {
@@ -128,7 +127,8 @@ footer {
       max-width: 450px;
       text-align: center; }
       main .banner-bg .banner-content h1 {
-        font-size: 24px; }
+        font-size: 24px; 
+        line-height: 30px;}
   main .articles {
     display: grid;
     grid-gap: 20px;
@@ -150,10 +150,21 @@ footer {
     align-items: center; }
     footer .footer-content .copyright {
       margin-top: 20px; } }
+
+@media (min-width: 576px) {
+  header .navigation ul li a:hover {
+    color: #5acadc; }
+    main .articles-item:hover {
+      background: #37c3d8; }
+      footer .footer-content .footer-nav a:hover {
+        text-decoration: none; }
+}
+
+
 @media (max-width: 575px) {
   header .navigation {
     justify-content: flex-start;
-    height: 215px;
+    height: auto;
     flex-direction: column;
     max-width: 100%; }
     header .navigation .logo {
@@ -162,10 +173,13 @@ footer {
         width: 100px; }
     header .navigation nav {
       width: 100%; }
+      header .navigation ul {
+        margin-bottom: 0px;
+      }
       header .navigation nav ul li {
         display: block;
         border-top: 1px solid #cdcdcd;
-        padding: 10px;
+        padding: 10px 30px;
         background: #efefef; }
 
   main .banner-bg {
@@ -176,7 +190,8 @@ footer {
         padding: 10px;
         text-align: left;
         background: #37c3d8;
-        font-size: 18px; }
+        font-size: 18px; 
+        line-height: 20px; }
   main .articles {
     display: grid;
     grid-gap: 20px;
