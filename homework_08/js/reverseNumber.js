@@ -3,7 +3,7 @@ function reverseNumber(number) {
     var n = Math.abs(number);
 	while(n > 0) {
 		i = n % 10;
-        reverse = (reverse * 10 + i);
+        reverse = reverse * 10 + i;
 		n = Math.floor(n / 10);
 	}
 	return reverse * Math.sign(number);
