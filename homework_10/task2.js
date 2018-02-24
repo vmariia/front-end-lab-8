@@ -41,9 +41,7 @@ function fighter(object) {
 			return this.name;
 		},
 		block: function(){
-			debugger;
-			var bool = Math.random() >= 0.5;
-			return bool;
+			return Math.random() >= 0.5;
 		},
 		getStats: function(){
 			return {
@@ -56,13 +54,10 @@ function fighter(object) {
 			return history;
 		},
 		fight: function(enemy){
-			debugger;
 			if (enemy.block()) {
 				return false;
 			} else {
-				if (enemy.getStats().hp >= this.attack) {
-					enemy.hp -= this.attack;
-				}
+				enemy.hp -= this.attack;
 				if (this.attack >= enemy.getStats().hp) {
 					history.wins++;
 					enemy.getCombatHistory().loses++;
