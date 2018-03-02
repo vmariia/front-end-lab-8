@@ -1,0 +1,83 @@
+body {
+	margin: 0px;
+		color: #A19E86;
+}
+.thumbnails, .tank-details {
+	background: #1C1C1F;
+	height: 100vh;
+	padding: 20px 5px;
+}
+h1 {
+	margin: 0;
+
+}
+.container-preview {
+	display: flex;
+	flex-wrap: wrap;
+}
+.thumbnail {
+	padding: 30px;
+}
+.thumbnail:hover {
+	background: #2C2C2C;
+	cursor: pointer;
+}
+.img-preview {
+    width: 210px;
+    height: auto;
+}
+.title {
+	display: flex;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.model-title {
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+.level {
+	padding: 0px 5px;
+}
+
+/*tankDetail*/
+.headline {
+	font-size: 18px;
+	font-weight: bold;
+	display: flex;
+}
+.container-content {
+	display: flex;
+	margin-top: 20px;
+}
+.col-first {
+	width: 40%;
+}
+.col-second {
+	width: 60%;
+}
+.title-detail-model {
+	padding: 0px 7px;
+	text-transform: uppercase;
+}
+.detail-title {
+	font-size: 20px;
+}
+.tank-table {
+	margin-top: 15px;
+	width: 100%;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+
+}
+table, td {
+	border: 1px solid #A19E86;
+}
+td {
+	padding: 7px;
+}
